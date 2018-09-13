@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imposition", "src\Imposition\Imposition.csproj", "{89A19EB4-B70E-40E1-9737-749C6207CFCF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "src\Test\Test.csproj", "{E92356C4-8945-443B-8375-344EB2A097FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layouts", "Layouts", "{C17CF35E-00AE-48D9-8A59-2C0B0E8EEC0B}"
+	ProjectSection(SolutionItems) = preProject
+		src\Layouts\403.json = src\Layouts\403.json
+		src\Layouts\404.json = src\Layouts\404.json
+		src\Layouts\405.json = src\Layouts\405.json
+		src\Layouts\408.json = src\Layouts\408.json
+		src\Layouts\409.json = src\Layouts\409.json
+		src\Layouts\410.json = src\Layouts\410.json
+		src\Layouts\411.json = src\Layouts\411.json
+		src\Layouts\412.json = src\Layouts\412.json
+		src\Layouts\413.json = src\Layouts\413.json
+		src\Layouts\414.json = src\Layouts\414.json
+		src\Layouts\415.json = src\Layouts\415.json
+		src\Layouts\417.json = src\Layouts\417.json
+		src\Layouts\418.json = src\Layouts\418.json
+		src\Layouts\420.json = src\Layouts\420.json
+		src\Layouts\421.json = src\Layouts\421.json
+		src\Layouts\422.json = src\Layouts\422.json
+		src\Layouts\423.json = src\Layouts\423.json
+		src\Layouts\424.json = src\Layouts\424.json
+		src\Layouts\425.json = src\Layouts\425.json
+		src\Layouts\426.json = src\Layouts\426.json
+		src\Layouts\427.json = src\Layouts\427.json
+		src\Layouts\428.json = src\Layouts\428.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89A19EB4-B70E-40E1-9737-749C6207CFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89A19EB4-B70E-40E1-9737-749C6207CFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89A19EB4-B70E-40E1-9737-749C6207CFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89A19EB4-B70E-40E1-9737-749C6207CFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92356C4-8945-443B-8375-344EB2A097FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92356C4-8945-443B-8375-344EB2A097FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92356C4-8945-443B-8375-344EB2A097FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92356C4-8945-443B-8375-344EB2A097FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62CE768C-5FF8-406E-9F43-8B20C629160C}
+	EndGlobalSection
+EndGlobal

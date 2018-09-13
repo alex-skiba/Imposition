@@ -1,0 +1,31 @@
+{
+  "PapCode": 418,
+  "SheetWidth": 1077.16541,
+  "SheetHeight": 793.7008,
+  "Elements": [
+    {
+      "Type": 0,
+      "Resource": {
+        "Name": "Pressview MeasureColor Strip",
+        "FileName": "ColorStrip.pdf"
+      },
+      "Left": 0.0,
+      "Bottom": 131.3504,
+      "Width": 79.0,
+      "Height": 531.0,
+      "Rotate": 0.0
+    },
+    {
+      "Type": 1,
+      "Resource": {
+        "Name": "Vendor logo",
+        "FileName": "{vendorid}.jpg"
+      },
+      "Left": 381.6,
+      "Bottom": -50.3999977,
+      "Width": 144.0,
+      "Height": 36.0,
+      "Rotate": 180.0
+    }
+  ]
+}
