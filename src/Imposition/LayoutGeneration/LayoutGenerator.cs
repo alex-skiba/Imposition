@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Imposition.Model;
+using Layout = Imposition.Model.Layout;
 
-namespace Imposition
+namespace Imposition.LayoutGeneration
 {
-    public class LayoutGenerator
+    public class CanvasGenerator
     {
         public static Layout BuildFromXjf(int papCode, xpresso xjf)
         {
@@ -45,15 +46,10 @@ namespace Imposition
             return new Element
             {
                 Type = ElementType.VendorLogo,
-                Resource = new ElementResource
-                {
-                    Name = "Vendor logo",
-                    FileName = vendorElement.resource
-                },
-                Left = leftPoints,
-                Bottom = bottomPoints,
-                Height = heightPoints,
-                Width = widthPoints,
+                //Left = leftPoints,
+                //Bottom = bottomPoints,
+                //Height = heightPoints,
+                //Width = widthPoints,
                 Rotate = vendorElement.rotate
             };
         }
@@ -70,16 +66,16 @@ namespace Imposition
 
             return new Element
             {
-                Type = ElementType.MeasureColorStrip,
-                Resource = new ElementResource
-                {
-                    Name = "Pressview MeasureColor Strip",
-                    FileName = "ColorStrip.pdf"
-                },
-                Left = 0,
-                Bottom = stripBottomPoint,
-                Height = stripHeightPoints,
-                Width = stripWidthPoints,
+                //Type = ElementType.MeasureColorStrip,
+                //Resource = new ElementResource
+                //{
+                //    Name = "Pressview MeasureColor Strip",
+                //    FileName = "ColorStrip.pdf"
+                //},
+                //Left = 0,
+                //Bottom = stripBottomPoint,
+                //Height = stripHeightPoints,
+                //Width = stripWidthPoints,
                 Rotate = 0
             };
         }

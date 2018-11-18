@@ -1,0 +1,25 @@
+{
+  "Key": "pap_402_imposition",
+  "PapCode": 402,
+  "PrintSurfaceType": 1,
+  "MediaBoxSize": {
+    "Width": 612.2831,
+    "Height": 810.7081
+  },
+  "MediaRotationAngle": 90.0,
+  "IsDuplex": true,
+  "SourcePagesImpositionOrder": 1,
+  "ImpositionStartPoint": 0,
+  "ImpositionDirection": 0,
+  "ProductLeaderContent": [
+    {
+      "Type": 0,
+      "Key": "{vendorid}.jpg",
+      "Location": {
+        "X": 87.87396,
+        "Y": 124.724327
+      },
+      "RotationAngle": 90.0
+    }
+  ]
+}

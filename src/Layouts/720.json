@@ -1,0 +1,191 @@
+{
+  "PapCode": 720,
+  "SheetWidth": 808.0,
+  "SheetHeight": 1158.0,
+  "Elements": null,
+  "Tiles": [
+    {
+      "Box": {
+        "Left": 0.0,
+        "Bottom": 0.0,
+        "Width": 694.4882,
+        "Height": 334.4881
+      },
+      "MediaBox": {
+        "Left": 0.0,
+        "Bottom": 0.0,
+        "Width": 694.4882,
+        "Height": 334.4881
+      },
+      "CutBox": {
+        "Left": 20.0,
+        "Bottom": 20.0,
+        "Width": 654.4882,
+        "Height": 294.4881
+      },
+      "Elements": [
+        {
+          "Type": 2,
+          "Key": "ticketbarcode",
+          "Box": {
+            "Left": 190.0,
+            "Bottom": 316.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 2,
+          "Key": "ticketbarcode",
+          "Box": {
+            "Left": 480.0,
+            "Bottom": 316.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 3,
+          "Key": "ticketbarcodeplaintext",
+          "Box": {
+            "Left": 250.0,
+            "Bottom": 323.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 5,
+          "Key": "cutmarks",
+          "Box": null,
+          "Rotate": 0.0
+        }
+      ]
+    },
+    {
+      "Box": {
+        "Left": 0.0,
+        "Bottom": 334.4881,
+        "Width": 694.4882,
+        "Height": 334.4881
+      },
+      "MediaBox": {
+        "Left": 0.0,
+        "Bottom": 0.0,
+        "Width": 694.4882,
+        "Height": 334.4881
+      },
+      "CutBox": {
+        "Left": 20.0,
+        "Bottom": 20.0,
+        "Width": 654.4882,
+        "Height": 294.4881
+      },
+      "Elements": [
+        {
+          "Type": 2,
+          "Key": "ticketbarcode",
+          "Box": {
+            "Left": 190.0,
+            "Bottom": 316.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 2,
+          "Key": "ticketbarcode",
+          "Box": {
+            "Left": 480.0,
+            "Bottom": 316.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 3,
+          "Key": "ticketbarcodeplaintext",
+          "Box": {
+            "Left": 250.0,
+            "Bottom": 323.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 5,
+          "Key": "cutmarks",
+          "Box": null,
+          "Rotate": 0.0
+        }
+      ]
+    },
+    {
+      "Box": {
+        "Left": 0.0,
+        "Bottom": 668.9762,
+        "Width": 694.4882,
+        "Height": 334.4881
+      },
+      "MediaBox": {
+        "Left": 0.0,
+        "Bottom": 0.0,
+        "Width": 694.4882,
+        "Height": 334.4881
+      },
+      "CutBox": {
+        "Left": 20.0,
+        "Bottom": 20.0,
+        "Width": 654.4882,
+        "Height": 294.4881
+      },
+      "Elements": [
+        {
+          "Type": 2,
+          "Key": "ticketbarcode",
+          "Box": {
+            "Left": 190.0,
+            "Bottom": 316.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 2,
+          "Key": "ticketbarcode",
+          "Box": {
+            "Left": 480.0,
+            "Bottom": 316.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 3,
+          "Key": "ticketbarcodeplaintext",
+          "Box": {
+            "Left": 250.0,
+            "Bottom": 323.0,
+            "Width": 120.0,
+            "Height": 28.3464012
+          },
+          "Rotate": 0.0
+        },
+        {
+          "Type": 5,
+          "Key": "cutmarks",
+          "Box": null,
+          "Rotate": 0.0
+        }
+      ]
+    }
+  ]
+}

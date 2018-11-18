@@ -4,10 +4,15 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>Imposition</RootNamespace>
+    <AssemblyName>Imposition</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xpresso.Dto\Xpresso.Dto.csproj" />
   </ItemGroup>
 
 </Project>

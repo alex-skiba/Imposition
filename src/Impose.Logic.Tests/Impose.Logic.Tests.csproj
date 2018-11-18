@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Albelli.Impose.Logic.Tests</AssemblyName>
+    <RootNamespace>Albelli.Impose.Logic.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+	<PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="NSubstitute" Version="3.1.0" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="Shouldly" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Impose.DataModel\Impose.DataModel.csproj" />
+    <ProjectReference Include="..\Impose.Logic\Impose.Logic.csproj" />
+  </ItemGroup>
+
+</Project>

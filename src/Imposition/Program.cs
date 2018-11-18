@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using Imposition.DAL;
+using Imposition.LayoutGeneration;
 
 namespace Imposition
 {
@@ -11,9 +12,11 @@ namespace Imposition
         {
             try
             {
-                CreateLayoutsWithColorStripFromXjf();
-                AddPressviewToXjfsFromLayouts();
-                SaveCustomizationsFromXjfs();
+                //CreateLayoutsWithColorStripFromXjf();
+                //AddPressviewToXjfsFromLayouts();
+                //SaveCustomizationsFromXjfs();
+                //CreatePap720Layout();
+                CreatePap402Layout();
 
                 Console.WriteLine("Done!");
             }
@@ -26,6 +29,20 @@ namespace Imposition
             Console.ReadKey();
         }
 
+        private static void CreatePap402Layout()
+        {
+            var layout = Pap402Generator.Generate();
+            LayoutRepository.SaveV2(layout);
+        }
+
+        private static void CreatePap720Layout()
+        {
+            var xjfFileName = @"c:\Work\Tasks\XpressoGoodbye\base_job.xjf";
+            var xjf = XpressoRepository.GetFromFile(xjfFileName);
+            var layout = Pap720Generator.BuildPap720(720, xjf);
+            LayoutRepository.Save(layout);
+        }
+
         // gets XJF files, downloaded by Xpresso, generates layouts
         // for each layout adds vendor logo element from XJF and creates new Pressview (measure color strip) element from hardcoded values
         private static void CreateLayoutsWithColorStripFromXjf()
@@ -35,7 +52,7 @@ namespace Imposition
             foreach (var code in codes)
             {
                 var xjf = XjfRepository.GetUntouched(code);
-                var layout = LayoutGenerator.BuildFromXjf(code, xjf);
+                var layout = CanvasGenerator.BuildFromXjf(code, xjf);
                 LayoutRepository.Save(layout);
             }
         }

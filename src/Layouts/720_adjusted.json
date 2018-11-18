@@ -1,0 +1,58 @@
+{
+  "PapCode": 7202,
+  "SheetWidth": 808.0,
+  "SheetHeight": 1158.0,
+  "Elements": null,
+  "Pages": [
+    {
+      "Left": 0.0,
+      "Bottom": 0.0,
+      "Width": 694.4882,
+      "Height": 334.4881,
+      "Elements": [
+        {
+          "Type": 2,
+          "Resource": {
+            "Name": "Barcode",
+            "FileName": "*X01882E2*",
+            "FontName": "Code-39-20",
+            "FontSize": 28.0
+          },
+          "Left": 190,
+          "Bottom": 316,
+          "Width": 120.0,
+          "Height": 28.3464012,
+          "Rotate": 0.0
+        },
+        {
+          "Type": 3,
+          "Resource": {
+            "Name": "Barcode text",
+            "FileName": "1/1 X01882E2 ",
+            "FontName": "Lucida Console",
+            "FontSize": 8.0
+          },
+          "Left": 350,
+          "Bottom": 323,
+          "Width": 120.0,
+          "Height": 28.3464012,
+          "Rotate": 0.0
+        },
+        {
+          "Type": 2,
+          "Resource": {
+            "Name": "Barcode",
+            "FileName": "*X01882E2*",
+            "FontName": "Code-39-20",
+            "FontSize": 28.0
+          },
+          "Left": 480,
+          "Bottom": 316,
+          "Width": 120.0,
+          "Height": 28.3464012,
+          "Rotate": 0.0
+        }
+      ]
+    }
+  ]
+}

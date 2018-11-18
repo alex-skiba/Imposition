@@ -1,0 +1,120 @@
+{
+  "Key": "pap_402_layout",
+  "PapCode": 402,
+  "SheetSize": {
+    "Width": 1814.17212,
+    "Height": 1303.93616
+  },
+  "Tiles": [
+    {
+      "ColumnIndex": 0,
+      "RowIndex": 0,
+      "MediaBox": {
+        "Left": 96.37789,
+        "Rigth": 907.086,
+        "Bottom": 651.9681,
+        "Top": 1264.25122,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 104.881821,
+        "Rigth": 898.5821,
+        "Bottom": 660.472,
+        "Top": 1255.74719,
+        "Width": 793.700256,
+        "Height": 595.2752
+      },
+      "CutmarksConfig": {
+        "MarkLength": 28.34644,
+        "TopLeftOffset": 8.503931,
+        "TopRightOffset": 8.503931,
+        "BottomLeftOffset": 8.503931,
+        "BottomRightOffset": 8.503931
+      }
+    },
+    {
+      "ColumnIndex": 0,
+      "RowIndex": 1,
+      "MediaBox": {
+        "Left": 96.37789,
+        "Rigth": 907.086,
+        "Bottom": 39.6850128,
+        "Top": 651.9681,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 104.881821,
+        "Rigth": 898.5821,
+        "Bottom": 48.1889458,
+        "Top": 643.4642,
+        "Width": 793.700256,
+        "Height": 595.2752
+      },
+      "CutmarksConfig": {
+        "MarkLength": 28.34644,
+        "TopLeftOffset": 8.503931,
+        "TopRightOffset": 8.503931,
+        "BottomLeftOffset": 8.503931,
+        "BottomRightOffset": 8.503931
+      }
+    },
+    {
+      "ColumnIndex": 1,
+      "RowIndex": 0,
+      "MediaBox": {
+        "Left": 907.08606,
+        "Rigth": 1717.79419,
+        "Bottom": 651.9681,
+        "Top": 1264.25122,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 915.589966,
+        "Rigth": 1709.29028,
+        "Bottom": 660.472,
+        "Top": 1255.74719,
+        "Width": 793.700256,
+        "Height": 595.2752
+      },
+      "CutmarksConfig": {
+        "MarkLength": 28.34644,
+        "TopLeftOffset": 8.503931,
+        "TopRightOffset": 8.503931,
+        "BottomLeftOffset": 8.503931,
+        "BottomRightOffset": 8.503931
+      }
+    },
+    {
+      "ColumnIndex": 1,
+      "RowIndex": 1,
+      "MediaBox": {
+        "Left": 907.08606,
+        "Rigth": 1717.79419,
+        "Bottom": 39.6850128,
+        "Top": 651.9681,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 915.589966,
+        "Rigth": 1709.29028,
+        "Bottom": 48.1889458,
+        "Top": 643.4642,
+        "Width": 793.700256,
+        "Height": 595.2752
+      },
+      "CutmarksConfig": {
+        "MarkLength": 28.34644,
+        "TopLeftOffset": 8.503931,
+        "TopRightOffset": 8.503931,
+        "BottomLeftOffset": 8.503931,
+        "BottomRightOffset": 8.503931
+      }
+    }
+  ],
+  "ColumnsCount": 2,
+  "RowsCount": 2
+}

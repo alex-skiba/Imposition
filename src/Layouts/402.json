@@ -1,0 +1,137 @@
+{
+  "PapCode": 402,
+  "SheetWidth": 1814.17212,
+  "SheetHeight": 1303.93616,
+  "FrontTiles": [
+    {
+      "ColumnIndex": 0,
+      "RowIndex": 0,
+      "MediaBox": {
+        "Left": 96.37789,
+        "Bottom": 651.9681,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 104.881821,
+        "Bottom": 660.472,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    },
+    {
+      "ColumnIndex": 0,
+      "RowIndex": 1,
+      "MediaBox": {
+        "Left": 96.37789,
+        "Bottom": 39.6850128,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 104.881821,
+        "Bottom": 48.1889458,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    },
+    {
+      "ColumnIndex": 1,
+      "RowIndex": 0,
+      "MediaBox": {
+        "Left": 907.08606,
+        "Bottom": 651.9681,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 915.589966,
+        "Bottom": 660.472,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    },
+    {
+      "ColumnIndex": 1,
+      "RowIndex": 1,
+      "MediaBox": {
+        "Left": 907.08606,
+        "Bottom": 39.6850128,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 915.589966,
+        "Bottom": 48.1889458,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    }
+  ],
+  "BackTiles": [
+    {
+      "ColumnIndex": 0,
+      "RowIndex": 0,
+      "MediaBox": {
+        "Left": 96.37789,
+        "Bottom": 651.9681,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 104.881821,
+        "Bottom": 660.472,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    },
+    {
+      "ColumnIndex": 0,
+      "RowIndex": 1,
+      "MediaBox": {
+        "Left": 96.37789,
+        "Bottom": 39.6850128,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 104.881821,
+        "Bottom": 48.1889458,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    },
+    {
+      "ColumnIndex": 1,
+      "RowIndex": 0,
+      "MediaBox": {
+        "Left": 907.08606,
+        "Bottom": 651.9681,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 915.589966,
+        "Bottom": 660.472,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    },
+    {
+      "ColumnIndex": 1,
+      "RowIndex": 1,
+      "MediaBox": {
+        "Left": 907.08606,
+        "Bottom": 39.6850128,
+        "Width": 810.7081,
+        "Height": 612.2831
+      },
+      "CutBox": {
+        "Left": 915.589966,
+        "Bottom": 48.1889458,
+        "Width": 793.700256,
+        "Height": 595.2752
+      }
+    }
+  ]
+}

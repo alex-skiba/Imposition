@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
@@ -43,11 +44,11 @@ namespace Imposition
                     index = 1,
                     picture = layout.Elements.Select(el => new xpressoTemplatesPagesPagePicture
                         {
-                            resource = el.Resource.FileName,
+                            //resource = el.Resource.FileName,
                             rotate = (byte) el.Rotate,
                             fitmethod = el.Type == ElementType.MeasureColorStrip ? "entire" : null,
                             // todo: apply DRY, the same code is written in XjfModifier
-                            data = $"{el.Left / pointsInInch:F1} {el.Bottom / pointsInInch:F1} {el.Width / pointsInInch:F1} {el.Height / pointsInInch:F1}"
+                            //data = $"{el.Left / pointsInInch:F1} {el.Bottom / pointsInInch:F1} {el.Width / pointsInInch:F1} {el.Height / pointsInInch:F1}"
                         })
                         .ToArray()
                 };

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
+using Imposition.Model;
 
 namespace Imposition.DAL
 {
@@ -28,7 +29,7 @@ namespace Imposition.DAL
             }
         }
 
-        private static xpresso GetFromFile(string fileName)
+        public static xpresso GetFromFile(string fileName)
         {
             using (var reader = new StreamReader(fileName))
             {

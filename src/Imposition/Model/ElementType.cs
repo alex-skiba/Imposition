@@ -3,6 +3,10 @@
     public enum ElementType
     {
         MeasureColorStrip,
-        VendorLogo
+        VendorLogo,
+        Barcode,
+        Text,
+        Image,
+        CutMark
     }
 }

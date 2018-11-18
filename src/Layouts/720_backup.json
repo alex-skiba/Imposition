@@ -1,0 +1,58 @@
+{
+  "PapCode": 7201,
+  "SheetWidth": 808.0,
+  "SheetHeight": 1158.0,
+  "Elements": null,
+  "Pages": [
+    {
+      "Left": 0.0,
+      "Bottom": 0.0,
+      "Width": 694.4882,
+      "Height": 334.4881,
+      "Elements": [
+        {
+          "Type": 2,
+          "Resource": {
+            "Name": "Barcode",
+            "FileName": "*{ticketbarcode}*",
+            "FontName": "Code-39-20",
+            "FontSize": 28.0
+          },
+          "Left": 0.0,
+          "Bottom": 42.5232,
+          "Width": 360.0,
+          "Height": 28.3464012,
+          "Rotate": 0.0
+        },
+        {
+          "Type": 3,
+          "Resource": {
+            "Name": "Barcode text",
+            "FileName": "{linecount} {ticketbarcode} {binroute}",
+            "FontName": "Lucida Console",
+            "FontSize": 8.0
+          },
+          "Left": 144.0,
+          "Bottom": 35.3232,
+          "Width": 360.0,
+          "Height": 28.3464012,
+          "Rotate": 0.0
+        },
+        {
+          "Type": 2,
+          "Resource": {
+            "Name": "Barcode",
+            "FileName": "*{ticketbarcode}*",
+            "FontName": "Code-39-20",
+            "FontSize": 28.0
+          },
+          "Left": 288.0,
+          "Bottom": 42.5232,
+          "Width": 360.0,
+          "Height": 28.3464012,
+          "Rotate": 0.0
+        }
+      ]
+    }
+  ]
+}

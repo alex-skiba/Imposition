@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Imposition.Model;
 
 namespace Imposition
@@ -23,11 +24,11 @@ namespace Imposition
             var strip = layout.Elements.Single(e => e.Type == ElementType.MeasureColorStrip);
             return new xpressoTemplatesPagesPagePicture
             {
-                // todo: apply DRY, the same code is written in CustomizationsGenerator
-                data = $"{strip.Left / pointsInInch:F1} {strip.Bottom / pointsInInch:F1} {strip.Width / pointsInInch:F1} {strip.Height / pointsInInch:F1}",
-                rotate = (byte) strip.Rotate,
-                resource = strip.Resource.FileName,
-                fitmethod = "entire"
+                //// todo: apply DRY, the same code is written in CustomizationsGenerator
+                //data = $"{strip.Left / pointsInInch:F1} {strip.Bottom / pointsInInch:F1} {strip.Width / pointsInInch:F1} {strip.Height / pointsInInch:F1}",
+                //rotate = (byte) strip.Rotate,
+                //resource = strip.Resource.FileName,
+                //fitmethod = "entire"
             };
         }
     }

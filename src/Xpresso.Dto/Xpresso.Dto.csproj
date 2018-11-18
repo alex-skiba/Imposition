@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFEDC038-146D-4F2B-9B49-082CBA423643}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Albumprinter.Plant.Xpresso</RootNamespace>
+    <AssemblyName>Xpresso.Dto</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="Classes\ArticleType.cs" />
+    <Compile Include="Classes\XpressoDataLayout.cs" />
+    <Compile Include="Classes\Press.cs" />
+    <Compile Include="Classes\XpressoData.cs" />
+    <Compile Include="Xjf\XjfXml\BannerSheet.cs" />
+    <Compile Include="Xjf\XjfXml\Caption.cs" />
+    <Compile Include="Xjf\XjfXml\FileVariableItems.cs" />
+    <Compile Include="Xjf\XjfXml\ImpositionTypes.cs" />
+    <Compile Include="Xjf\XjfXml\Job.cs" />
+    <Compile Include="Xjf\XjfXml\Layout.cs" />
+    <Compile Include="Xjf\XjfXml\MockupFile.cs" />
+    <Compile Include="Xjf\XjfXml\Mockups.cs" />
+    <Compile Include="Xjf\XjfXml\Page.cs" />
+    <Compile Include="Xjf\XjfXml\PageElement.cs" />
+    <Compile Include="Xjf\XjfXml\PageResourceElement.cs" />
+    <Compile Include="Xjf\XjfXml\Pages.cs" />
+    <Compile Include="Xjf\XjfXml\PageTextElement.cs" />
+    <Compile Include="Xjf\XjfXml\PdfPageImportElement.cs" />
+    <Compile Include="Xjf\XjfXml\Picture.cs" />
+    <Compile Include="Xjf\XjfXml\ResourceFile.cs" />
+    <Compile Include="Xjf\XjfXml\Resources.cs" />
+    <Compile Include="Xjf\XjfXml\Sheets.cs" />
+    <Compile Include="Xjf\XjfXml\Templates.cs" />
+    <Compile Include="Xjf\XjfXml\Ticketbarcode.cs" />
+    <Compile Include="Xjf\XjfXml\TicketBarcodePlainText.cs" />
+    <Compile Include="Xjf\XjfXml\Variables.cs" />
+    <Compile Include="Xjf\XjfXml\XpressoModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild" DependsOnTargets="AssignTargetPaths;Compile;ResolveKeySource" Inputs="$(MSBuildAllProjects);@(IntermediateAssembly)" Outputs="$(OutputPath)$(_SGenDllName)">
+    <!-- Delete the file because I can't figure out how to force the SGen task. -->
+    <Delete Files="$(TargetDir)$(TargetName).XmlSerializers.dll" ContinueOnError="true" />
+    <SGen BuildAssemblyName="$(TargetFileName)" BuildAssemblyPath="$(OutputPath)" References="@(ReferencePath)" ShouldGenerateSerializer="true" UseProxyTypes="false" KeyContainer="$(KeyContainerName)" KeyFile="$(KeyOriginatorFile)" DelaySign="$(DelaySign)" ToolPath="$(TargetFrameworkSDKToolsDirectory)" Platform="$(Platform)">
+      <Output TaskParameter="SerializationAssembly" ItemName="SerializationAssembly" />
+    </SGen>
+  </Target>
+</Project>
