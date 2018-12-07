@@ -22,7 +22,7 @@ namespace Albelli.Impose.XpressoAdapter
                 {
                     new Element
                     {
-                        Type = ElementType.Text,
+                        Type = ElementType.Image,
                         Key = "{vendorid}.jpg",
                         Location = new Point {X = 31f.MmToPoints(), Y = 44f.MmToPoints()},
                         RotationAngle = 90f

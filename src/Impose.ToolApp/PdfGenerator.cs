@@ -39,12 +39,34 @@ namespace Albelli.Impose.ToolApp
                 foreach (var tile in outputPage.Tiles)
                 {
                     var sourcePdf = pdf.open_pdi_document(tile.SourceFilePath, string.Empty);
-                    var sourcePage = pdf.open_pdi_page(sourcePdf, tile.SourcePageNumber, string.Empty);
-                    pdf.fit_pdi_page(sourcePage, tile.MediaBox.Left, tile.MediaBox.Bottom, $"boxsize={{{tile.MediaBox.Width} {tile.MediaBox.Height}}} fitmethod=entire");
+                    // open source pdf and use all its content (not only visible part), see pdflib api reference
+                    var sourcePage = pdf.open_pdi_page(sourcePdf, tile.SourcePageNumber, "pdiusebox=media");
+                    // todo: use source file cropbox to clip tile content with bleed.
+                    // in current implementation it places one visible source page twice
+                    var orientation = GetOrientationFromAngle(tile.MediaRotationAngle);
+                    var tilePlacementOptions = $"boxsize={{{tile.MediaBox.Width} {tile.MediaBox.Height}}} orientate={orientation} fitmethod=clip";
+                    pdf.fit_pdi_page(sourcePage, tile.MediaBox.Left, tile.MediaBox.Bottom, tilePlacementOptions);
                     pdf.close_pdi_page(sourcePage);
                 }
 
                 pdf.end_page_ext(string.Empty);
+            }
+        }
+
+        private static string GetOrientationFromAngle(float rotationAngle)
+        {
+            switch (rotationAngle)
+            {
+                case 0:
+                    return "north";
+                case 90:
+                    return "east";
+                case 180:
+                    return "south";
+                case 270:
+                    return "west";
+                default:
+                    throw new ArgumentException($"Cannot convert angle {rotationAngle} to orientation");
             }
         }
 
