@@ -1,4 +1,5 @@
-﻿using Albelli.Impose.DataModel.Input;
+﻿using Albelli.Impose.DataModel.Common;
+using Albelli.Impose.DataModel.Input;
 
 namespace Albelli.Impose.ToolApp
 {

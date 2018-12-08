@@ -1,4 +1,4 @@
-﻿namespace Albelli.Impose.DataModel.Input
+﻿namespace Albelli.Impose.DataModel.Common
 {
     public struct Size
     {

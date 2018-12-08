@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Albelli.Impose.DataModel.Common;
 using Albelli.Impose.DataModel.Input;
 using Albelli.Impose.DataModel.Output;
 using Albelli.Impose.Logic.Engines;

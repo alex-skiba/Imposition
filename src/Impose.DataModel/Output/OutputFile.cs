@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Albelli.Impose.DataModel.Common;
 using Albelli.Impose.DataModel.Input;
 
 namespace Albelli.Impose.DataModel.Output

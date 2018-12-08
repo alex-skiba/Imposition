@@ -1,4 +1,6 @@
-﻿namespace Albelli.Impose.DataModel.Input
+﻿using Albelli.Impose.DataModel.Common;
+
+namespace Albelli.Impose.DataModel.Input
 {
     public class Element
     {
