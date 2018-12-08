@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using Albelli.Impose.DataModel.Input;
 using Albelli.Impose.DataModel.Output;
 using Albelli.Impose.Logic;
 using Albelli.Impose.Logic.Engines;
+using Albelli.Impose.Logic.Validation;
 using Albelli.Impose.ToolApp.DAL;
 using Albelli.Impose.XpressoAdapter;
 
@@ -52,7 +52,8 @@ namespace Albelli.Impose.ToolApp
             var impositionRepo = new LocalImpositionRepository(ImpositionsDir);
             var sourceFilesRepo = new SourceFilesRepository(SourceFilesDir);
             var pdfGenerator = new PdfGenerator(OutputDir);
-            var imposer = new Imposer(layoutRepo, impositionRepo, sourceFilesRepo, new OutputFileBuilderFactory(), pdfGenerator);
+            var validator = new Validator();
+            var imposer = new Imposer(layoutRepo, impositionRepo, sourceFilesRepo, new OutputFileBuilderFactory(), pdfGenerator, validator);
             return imposer;
         }
 

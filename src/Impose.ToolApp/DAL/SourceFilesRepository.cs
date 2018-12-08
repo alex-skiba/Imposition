@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using Albelli.Impose.DataModel.Common;
-using Albelli.Impose.DataModel.Input;
 using Albelli.Impose.DataModel.Output;
 using Albelli.Impose.Logic.Contract;
 using Albelli.Pdf;

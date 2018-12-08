@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Impose.DataModel\Impose.DataModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.1.0" />
+  </ItemGroup>
+
 </Project>

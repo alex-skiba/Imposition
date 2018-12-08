@@ -1,12 +1,7 @@
 ﻿namespace Albelli.Impose.DataModel.Input
 {
-    public class CutmarksConfig
+    public struct CutmarksConfig
     {
-        public CutmarksConfig()
-        {
-
-        }
-
         // todo: builder
         public CutmarksConfig(float oneOffsetForAll)
         {
@@ -14,6 +9,7 @@
             TopRightOffset = oneOffsetForAll;
             BottomLeftOffset = oneOffsetForAll;
             BottomRightOffset = oneOffsetForAll;
+            MarkLength = 10.0f;
         }
 
         public float MarkLength { get; set; }
