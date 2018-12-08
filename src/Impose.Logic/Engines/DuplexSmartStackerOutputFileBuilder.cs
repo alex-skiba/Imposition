@@ -84,7 +84,7 @@ namespace Albelli.Impose.Logic.Engines
                     frontTile.CutBox = frontLayoutTile.CutBox;
                     frontTile.MediaRotationAngle = _imposition.MediaRotationAngle;
                     frontTile.SourceFilePath = product.FileName;
-                    frontTile.SourcePageNumber = frontSourcePage.Number;
+                    frontTile.SourcePage = frontSourcePage;
 
                     var backLayoutTile = _layout.Tiles.At(iterator.CurrentBackPosition);
                     var backTile = backOutputPage.Tiles[iterator.CurrentBackPosition];
@@ -92,7 +92,7 @@ namespace Albelli.Impose.Logic.Engines
                     backTile.CutBox = backLayoutTile.CutBox;
                     backTile.MediaRotationAngle = _imposition.MediaRotationAngle;
                     backTile.SourceFilePath = product.FileName;
-                    backTile.SourcePageNumber = backSourcePage.Number;
+                    backTile.SourcePage = backSourcePage;
 
                     iterator.MoveForward();
                 }
@@ -102,11 +102,11 @@ namespace Albelli.Impose.Logic.Engines
                 {
                     var frontTile = frontOutputPage.Tiles[iterator.CurrentFrontPosition];
                     frontTile.SourceFilePath = product.FileName;
-                    frontTile.SourcePageNumber = 0;
+                    frontTile.SourcePage = null;
 
                     var backTile = backOutputPage.Tiles[iterator.CurrentBackPosition];
                     backTile.SourceFilePath = product.FileName;
-                    backTile.SourcePageNumber = 0;
+                    backTile.SourcePage = null;
 
                     iterator.MoveForward();
                 }
@@ -119,11 +119,11 @@ namespace Albelli.Impose.Logic.Engines
 
                 var frontTile = frontOutputPage.Tiles[iterator.CurrentFrontPosition];
                 frontTile.SourceFilePath = product.FileName;
-                frontTile.SourcePageNumber = 0;
+                frontTile.SourcePage = null;
 
                 var backTile = backOutputPage.Tiles[iterator.CurrentBackPosition];
                 backTile.SourceFilePath = product.FileName;
-                backTile.SourcePageNumber = 0;
+                backTile.SourcePage = null;
 
                 iterator.MoveForward();
             }

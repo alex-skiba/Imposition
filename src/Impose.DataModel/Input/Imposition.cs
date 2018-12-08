@@ -8,7 +8,6 @@ namespace Albelli.Impose.DataModel.Input
         public int PapCode { get; set; }
 
         public PrintSurface PrintSurfaceType { get; set; }
-        public Size MediaBoxSize { get; set; }
         public float MediaRotationAngle { get; set; }
 
         public bool IsDuplex => PrintSurfaceType != PrintSurface.Simplex;

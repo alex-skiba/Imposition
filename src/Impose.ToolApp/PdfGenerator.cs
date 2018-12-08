@@ -40,7 +40,7 @@ namespace Albelli.Impose.ToolApp
                 {
                     var sourcePdf = pdf.open_pdi_document(tile.SourceFilePath, string.Empty);
                     // open source pdf and use all its content (not only visible part), see pdflib api reference
-                    var sourcePage = pdf.open_pdi_page(sourcePdf, tile.SourcePageNumber, "pdiusebox=media");
+                    var sourcePage = pdf.open_pdi_page(sourcePdf, tile.SourcePage.Number, "pdiusebox=media");
                     // todo: use source file cropbox to clip tile content with bleed.
                     // in current implementation it places one visible source page twice
                     var orientation = GetOrientationFromAngle(tile.MediaRotationAngle);

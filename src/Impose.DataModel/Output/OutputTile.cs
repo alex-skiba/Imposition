@@ -9,7 +9,7 @@ namespace Albelli.Impose.DataModel.Output
             Position = position;
         }
 
-        public bool IsEmpty => SourcePageNumber <= 0;
+        public bool IsEmpty => SourcePage == null;
 
         // layout
         public TilePosition Position { get; }
@@ -21,6 +21,6 @@ namespace Albelli.Impose.DataModel.Output
 
         // source
         public string SourceFilePath { get; set; }
-        public int SourcePageNumber { get; set; }
+        public SourcePage SourcePage { get; set; }
     }
 }

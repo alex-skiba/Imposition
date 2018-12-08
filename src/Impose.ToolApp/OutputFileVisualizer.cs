@@ -16,7 +16,7 @@ namespace Albelli.Impose.ToolApp
                     for (var colIndex = 0; colIndex < page.ColumnsCount; colIndex++)
                     {
                         var tile = page.Tiles[rowIndex, colIndex];
-                        output.Append($"|{tile.SourcePageNumber:D4}");
+                        output.Append($"|{tile.SourcePage:D4}");
                     }
                     output.AppendLine("|");
                 }

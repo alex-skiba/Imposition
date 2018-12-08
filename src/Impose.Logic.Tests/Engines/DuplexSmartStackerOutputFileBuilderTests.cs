@@ -50,14 +50,14 @@ namespace Albelli.Impose.Logic.Tests.Engines
             var frontPage = actual.Pages.First();
             var backPage = actual.Pages.Last();
 
-            frontPage.Tiles[0, 0].SourcePageNumber.ShouldBe(7);
-            frontPage.Tiles[0, 1].SourcePageNumber.ShouldBe(3);
-            frontPage.Tiles[1, 0].SourcePageNumber.ShouldBe(5);
-            frontPage.Tiles[1, 1].SourcePageNumber.ShouldBe(1);
-            backPage.Tiles[0, 0].SourcePageNumber.ShouldBe(6);
-            backPage.Tiles[0, 1].SourcePageNumber.ShouldBe(2);
-            backPage.Tiles[1, 0].SourcePageNumber.ShouldBe(8);
-            backPage.Tiles[1, 1].SourcePageNumber.ShouldBe(4);
+            frontPage.Tiles[0, 0].SourcePage.Number.ShouldBe(7);
+            frontPage.Tiles[0, 1].SourcePage.Number.ShouldBe(3);
+            frontPage.Tiles[1, 0].SourcePage.Number.ShouldBe(5);
+            frontPage.Tiles[1, 1].SourcePage.Number.ShouldBe(1);
+            backPage.Tiles[0, 0].SourcePage.Number.ShouldBe(6);
+            backPage.Tiles[0, 1].SourcePage.Number.ShouldBe(2);
+            backPage.Tiles[1, 0].SourcePage.Number.ShouldBe(8);
+            backPage.Tiles[1, 1].SourcePage.Number.ShouldBe(4);
         }
 
         [Test]
@@ -80,26 +80,26 @@ namespace Albelli.Impose.Logic.Tests.Engines
             var firstSheetFrontPage = actual.Pages[0];
             var firstSheetBackPage = actual.Pages[1];
 
-            firstSheetFrontPage.Tiles[0, 0].SourcePageNumber.ShouldBe(15);
-            firstSheetFrontPage.Tiles[0, 1].SourcePageNumber.ShouldBe(11);
-            firstSheetFrontPage.Tiles[1, 0].SourcePageNumber.ShouldBe(13);
-            firstSheetFrontPage.Tiles[1, 1].SourcePageNumber.ShouldBe(9);
-            firstSheetBackPage.Tiles[0, 0].SourcePageNumber.ShouldBe(14);
-            firstSheetBackPage.Tiles[0, 1].SourcePageNumber.ShouldBe(10);
-            firstSheetBackPage.Tiles[1, 0].SourcePageNumber.ShouldBe(16);
-            firstSheetBackPage.Tiles[1, 1].SourcePageNumber.ShouldBe(12);
+            firstSheetFrontPage.Tiles[0, 0].SourcePage.Number.ShouldBe(15);
+            firstSheetFrontPage.Tiles[0, 1].SourcePage.Number.ShouldBe(11);
+            firstSheetFrontPage.Tiles[1, 0].SourcePage.Number.ShouldBe(13);
+            firstSheetFrontPage.Tiles[1, 1].SourcePage.Number.ShouldBe(9);
+            firstSheetBackPage.Tiles[0, 0].SourcePage.Number.ShouldBe(14);
+            firstSheetBackPage.Tiles[0, 1].SourcePage.Number.ShouldBe(10);
+            firstSheetBackPage.Tiles[1, 0].SourcePage.Number.ShouldBe(16);
+            firstSheetBackPage.Tiles[1, 1].SourcePage.Number.ShouldBe(12);
 
             var secondSheetFrontPage = actual.Pages[2];
             var secondSheetBackPage = actual.Pages[3];
 
-            secondSheetFrontPage.Tiles[0, 0].SourcePageNumber.ShouldBe(7);
-            secondSheetFrontPage.Tiles[0, 1].SourcePageNumber.ShouldBe(3);
-            secondSheetFrontPage.Tiles[1, 0].SourcePageNumber.ShouldBe(5);
-            secondSheetFrontPage.Tiles[1, 1].SourcePageNumber.ShouldBe(1);
-            secondSheetBackPage.Tiles[0, 0].SourcePageNumber.ShouldBe(6);
-            secondSheetBackPage.Tiles[0, 1].SourcePageNumber.ShouldBe(2);
-            secondSheetBackPage.Tiles[1, 0].SourcePageNumber.ShouldBe(8);
-            secondSheetBackPage.Tiles[1, 1].SourcePageNumber.ShouldBe(4);
+            secondSheetFrontPage.Tiles[0, 0].SourcePage.Number.ShouldBe(7);
+            secondSheetFrontPage.Tiles[0, 1].SourcePage.Number.ShouldBe(3);
+            secondSheetFrontPage.Tiles[1, 0].SourcePage.Number.ShouldBe(5);
+            secondSheetFrontPage.Tiles[1, 1].SourcePage.Number.ShouldBe(1);
+            secondSheetBackPage.Tiles[0, 0].SourcePage.Number.ShouldBe(6);
+            secondSheetBackPage.Tiles[0, 1].SourcePage.Number.ShouldBe(2);
+            secondSheetBackPage.Tiles[1, 0].SourcePage.Number.ShouldBe(8);
+            secondSheetBackPage.Tiles[1, 1].SourcePage.Number.ShouldBe(4);
         }
 
         [Test]
@@ -178,41 +178,41 @@ namespace Albelli.Impose.Logic.Tests.Engines
             var firstSheetFrontPage = actual.Pages[0];
             var firstSheetBackPage = actual.Pages[1];
 
-            firstSheetFrontPage.Tiles[0, 0].SourcePageNumber.ShouldBe(7);
+            firstSheetFrontPage.Tiles[0, 0].SourcePage.Number.ShouldBe(7);
             firstSheetFrontPage.Tiles[0, 0].SourceFilePath.ShouldBe(firstProductFileName);
-            firstSheetFrontPage.Tiles[0, 1].SourcePageNumber.ShouldBe(3);
+            firstSheetFrontPage.Tiles[0, 1].SourcePage.Number.ShouldBe(3);
             firstSheetFrontPage.Tiles[0, 1].SourceFilePath.ShouldBe(firstProductFileName);
-            firstSheetFrontPage.Tiles[1, 0].SourcePageNumber.ShouldBe(5);
+            firstSheetFrontPage.Tiles[1, 0].SourcePage.Number.ShouldBe(5);
             firstSheetFrontPage.Tiles[1, 0].SourceFilePath.ShouldBe(firstProductFileName);
-            firstSheetFrontPage.Tiles[1, 1].SourcePageNumber.ShouldBe(1);
+            firstSheetFrontPage.Tiles[1, 1].SourcePage.Number.ShouldBe(1);
             firstSheetFrontPage.Tiles[1, 1].SourceFilePath.ShouldBe(firstProductFileName);
-            firstSheetBackPage.Tiles[0, 0].SourcePageNumber.ShouldBe(6);
+            firstSheetBackPage.Tiles[0, 0].SourcePage.Number.ShouldBe(6);
             firstSheetBackPage.Tiles[0, 0].SourceFilePath.ShouldBe(firstProductFileName);
-            firstSheetBackPage.Tiles[0, 1].SourcePageNumber.ShouldBe(2);
+            firstSheetBackPage.Tiles[0, 1].SourcePage.Number.ShouldBe(2);
             firstSheetBackPage.Tiles[0, 1].SourceFilePath.ShouldBe(firstProductFileName);
-            firstSheetBackPage.Tiles[1, 0].SourcePageNumber.ShouldBe(8);
+            firstSheetBackPage.Tiles[1, 0].SourcePage.Number.ShouldBe(8);
             firstSheetBackPage.Tiles[1, 0].SourceFilePath.ShouldBe(firstProductFileName);
-            firstSheetBackPage.Tiles[1, 1].SourcePageNumber.ShouldBe(4);
+            firstSheetBackPage.Tiles[1, 1].SourcePage.Number.ShouldBe(4);
             firstSheetBackPage.Tiles[1, 1].SourceFilePath.ShouldBe(firstProductFileName);
 
             var secondSheetFrontPage = actual.Pages[2];
             var secondSheetBackPage = actual.Pages[3];
 
-            secondSheetFrontPage.Tiles[0, 0].SourcePageNumber.ShouldBe(7);
+            secondSheetFrontPage.Tiles[0, 0].SourcePage.Number.ShouldBe(7);
             secondSheetFrontPage.Tiles[0, 0].SourceFilePath.ShouldBe(secondProductFileName);
-            secondSheetFrontPage.Tiles[0, 1].SourcePageNumber.ShouldBe(3);
+            secondSheetFrontPage.Tiles[0, 1].SourcePage.Number.ShouldBe(3);
             secondSheetFrontPage.Tiles[0, 1].SourceFilePath.ShouldBe(secondProductFileName);
-            secondSheetFrontPage.Tiles[1, 0].SourcePageNumber.ShouldBe(5);
+            secondSheetFrontPage.Tiles[1, 0].SourcePage.Number.ShouldBe(5);
             secondSheetFrontPage.Tiles[1, 0].SourceFilePath.ShouldBe(secondProductFileName);
-            secondSheetFrontPage.Tiles[1, 1].SourcePageNumber.ShouldBe(1);
+            secondSheetFrontPage.Tiles[1, 1].SourcePage.Number.ShouldBe(1);
             secondSheetFrontPage.Tiles[1, 1].SourceFilePath.ShouldBe(secondProductFileName);
-            secondSheetBackPage.Tiles[0, 0].SourcePageNumber.ShouldBe(6);
+            secondSheetBackPage.Tiles[0, 0].SourcePage.Number.ShouldBe(6);
             secondSheetBackPage.Tiles[0, 0].SourceFilePath.ShouldBe(secondProductFileName);
-            secondSheetBackPage.Tiles[0, 1].SourcePageNumber.ShouldBe(2);
+            secondSheetBackPage.Tiles[0, 1].SourcePage.Number.ShouldBe(2);
             secondSheetBackPage.Tiles[0, 1].SourceFilePath.ShouldBe(secondProductFileName);
-            secondSheetBackPage.Tiles[1, 0].SourcePageNumber.ShouldBe(8);
+            secondSheetBackPage.Tiles[1, 0].SourcePage.Number.ShouldBe(8);
             secondSheetBackPage.Tiles[1, 0].SourceFilePath.ShouldBe(secondProductFileName);
-            secondSheetBackPage.Tiles[1, 1].SourcePageNumber.ShouldBe(4);
+            secondSheetBackPage.Tiles[1, 1].SourcePage.Number.ShouldBe(4);
             secondSheetBackPage.Tiles[1, 1].SourceFilePath.ShouldBe(secondProductFileName);
         }
 

@@ -43,7 +43,7 @@ namespace Albelli.Impose.ToolApp.DAL
             {
                 SheetSize = new Size {Width = pageWidth, Height = pageHeight},
                 RotationAngle = rotationAngle,
-                MediaBox = ReadBox(pdf, sourcePdf, pageIndex, "MediaBox"),
+                //MediaBox = ReadBox(pdf, sourcePdf, pageIndex, "MediaBox"),
                 CropBox = ReadBox(pdf, sourcePdf, pageIndex, "CropBox"),
                 Number = pageIndex + 1
             };
@@ -65,9 +65,9 @@ namespace Albelli.Impose.ToolApp.DAL
         {
             var boxLeft = (float) pdf.pcos_get_number(fileHandle, $"pages[{page}]/{boxName}[0]");
             var boxBottom = (float) pdf.pcos_get_number(fileHandle, $"pages[{page}]/{boxName}[1]");
-            var boxWidth = (float) pdf.pcos_get_number(fileHandle, $"pages[{page}]/{boxName}[2]");
-            var boxHeight = (float) pdf.pcos_get_number(fileHandle, $"pages[{page}]/{boxName}[3]");
-            var box = new Box {Left = boxLeft, Bottom = boxBottom, Width = boxWidth, Height = boxHeight};
+            var boxRight = (float) pdf.pcos_get_number(fileHandle, $"pages[{page}]/{boxName}[2]");
+            var boxTop = (float) pdf.pcos_get_number(fileHandle, $"pages[{page}]/{boxName}[3]");
+            var box = new Box {Left = boxLeft, Bottom = boxBottom, Width = boxRight - boxLeft, Height = boxTop - boxBottom};
             return box;
         }
     }

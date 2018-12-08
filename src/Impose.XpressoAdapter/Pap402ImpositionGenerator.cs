@@ -16,7 +16,6 @@ namespace Albelli.Impose.XpressoAdapter
                 SourcePagesImpositionOrder = SourcePagesImpositionOrder.Reversed,
                 ImpositionDirection = SheetImpositionDirection.Up,
                 ImpositionStartPoint = SheetImpositionStartPoint.BottomRight,
-                MediaBoxSize = new Size {Width = 216f.MmToPoints(), Height = 286f.MmToPoints()},
                 MediaRotationAngle = 90f,
                 ProductLeaderContent = new List<Element>
                 {
