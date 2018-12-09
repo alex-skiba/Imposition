@@ -25,5 +25,10 @@ namespace Albelli.Impose.DataModel.Extensions
                 Height = baseBox.Height - translation.BottomOffset + translation.TopOffset
             };
         }
+
+        public static Point GetCenter(this Box source)
+        {
+            return new Point {X = source.Left + source.Width / 2.0f, Y = source.Bottom + source.Height / 2.0f};
+        }
     }
 }

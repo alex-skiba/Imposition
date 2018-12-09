@@ -9,7 +9,7 @@ using Albelli.Pdf;
 
 namespace Albelli.Impose.ToolApp
 {
-    public class PdfGenerator : IPdfGenerator
+    public class PdfGenerator : IOutputGenerator
     {
         private readonly string _outputDirectory;
 

@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using Albelli.Impose.DataModel.Input;
-using Albelli.Impose.DataModel.Output;
 using Albelli.Impose.Logic;
 using Albelli.Impose.Logic.Engines;
 using Albelli.Impose.Logic.Validation;
@@ -36,14 +34,17 @@ namespace Albelli.Impose.ToolApp
         private static void RunFullCycle()
         {
             var imposer = BuildImposer();
-            var outputPdfFileName = imposer.Impose(new BatchMetadata
+            var outputFile = imposer.Impose(new BatchMetadata
             {
                 LayoutKey = "pap_402_layout",
                 ImpositionKey = "pap_402_imposition",
                 AlbumIds = new List<int> {20328, 20199, 20198}
             });
 
-            Process.Start(outputPdfFileName);
+            var pdfFileName = new PdfGenerator(OutputDir).Generate(outputFile);
+            var svgFileName = new SvgGenerator(OutputDir).Generate(outputFile);
+            var txtFileName = new TextVisualizer(OutputDir).Generate(outputFile);
+            Process.Start(svgFileName);
         }
 
         private static Imposer BuildImposer()
@@ -51,15 +52,9 @@ namespace Albelli.Impose.ToolApp
             var layoutRepo = new LocalLayoutRepository(LayoutsDir);
             var impositionRepo = new LocalImpositionRepository(ImpositionsDir);
             var sourceFilesRepo = new SourceFilesRepository(SourceFilesDir);
-            var pdfGenerator = new PdfGenerator(OutputDir);
             var validator = new Validator();
-            var imposer = new Imposer(layoutRepo, impositionRepo, sourceFilesRepo, new OutputFileBuilderFactory(), pdfGenerator, validator);
+            var imposer = new Imposer(layoutRepo, impositionRepo, sourceFilesRepo, new OutputFileBuilderFactory(), validator);
             return imposer;
-        }
-
-        private static void CreateVisualization(OutputFile outputFile)
-        {
-            File.WriteAllText("visual.txt", OutputFileVisualizer.Visualize(outputFile));
         }
     }
 }

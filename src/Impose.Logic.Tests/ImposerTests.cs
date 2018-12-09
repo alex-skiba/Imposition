@@ -24,13 +24,11 @@ namespace Albelli.Impose.Logic.Tests
             var imposition = new Imposition();
             var sourceFile = new SourceFile();
             var outputFile = new OutputFile();
-            var outputPdfName = "test.pdf";
             var layoutRepositoryMock = Substitute.For<ILayoutRepository>();
             var impositionRepositoryMock = Substitute.For<IImpositionRepository>();
             var sourceFilesRepositoryMock = Substitute.For<ISourceFilesRepository>();
             var outputFileBuilderFactoryMock = Substitute.For<IOutputFileBuilderFactory>();
             var outputFileBuilderMock = Substitute.For<IOutputFileBuilder>();
-            var pdfGeneratorMock = Substitute.For<IPdfGenerator>();
             var validatorMock = Substitute.For<IValidator>();
 
             layoutRepositoryMock.Get(Arg.Any<string>()).Returns(layout);
@@ -38,9 +36,8 @@ namespace Albelli.Impose.Logic.Tests
             sourceFilesRepositoryMock.Get(Arg.Any<int>()).Returns(sourceFile);
             outputFileBuilderFactoryMock.Get(Arg.Any<Layout>(), Arg.Any<Imposition>()).Returns(outputFileBuilderMock);
             outputFileBuilderMock.Build(Arg.Any<List<SourceFile>>()).Returns(outputFile);
-            pdfGeneratorMock.Generate(Arg.Any<OutputFile>()).Returns(outputPdfName);
 
-            var target = new Imposer(layoutRepositoryMock, impositionRepositoryMock, sourceFilesRepositoryMock, outputFileBuilderFactoryMock, pdfGeneratorMock, validatorMock);
+            var target = new Imposer(layoutRepositoryMock, impositionRepositoryMock, sourceFilesRepositoryMock, outputFileBuilderFactoryMock, validatorMock);
 
             // Act
             target.Impose(new BatchMetadata {ImpositionKey = impositionKey, LayoutKey = layoutKey, AlbumIds = albumIds});
@@ -53,7 +50,6 @@ namespace Albelli.Impose.Logic.Tests
             validatorMock.Received(1).ValidateSourceFiles(Arg.Is<List<SourceFile>>(files => files.Contains(sourceFile)), layout, imposition);
             outputFileBuilderFactoryMock.Received(1).Get(layout, imposition);
             outputFileBuilderMock.Received(1).Build(Arg.Is<List<SourceFile>>(list => list.Single() == sourceFile));
-            pdfGeneratorMock.Received(1).Generate(outputFile);
         }
 
         [Test]
@@ -69,7 +65,6 @@ namespace Albelli.Impose.Logic.Tests
             var sourceFilesRepositoryMock = Substitute.For<ISourceFilesRepository>();
             var outputFileBuilderFactoryMock = Substitute.For<IOutputFileBuilderFactory>();
             var outputFileBuilderMock = Substitute.For<IOutputFileBuilder>();
-            var pdfGeneratorMock = Substitute.For<IPdfGenerator>();
             var validatorMock = Substitute.For<IValidator>();
 
             sourceFilesRepositoryMock.Get(1).Returns(fakeAlbums[0].SourceFile);
@@ -79,7 +74,7 @@ namespace Albelli.Impose.Logic.Tests
             var actualSourceFiles = new List<SourceFile>();
             outputFileBuilderMock.Build(Arg.Do<List<SourceFile>>(sourceFiles => actualSourceFiles.AddRange(sourceFiles)));
 
-            var target = new Imposer(layoutRepositoryMock, impositionRepositoryMock, sourceFilesRepositoryMock, outputFileBuilderFactoryMock, pdfGeneratorMock, validatorMock);
+            var target = new Imposer(layoutRepositoryMock, impositionRepositoryMock, sourceFilesRepositoryMock, outputFileBuilderFactoryMock, validatorMock);
 
             // Act
             target.Impose(new BatchMetadata {AlbumIds = fakeAlbumIds});

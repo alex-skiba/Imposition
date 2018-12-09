@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Albelli.Impose.DataModel.Input;
+using Albelli.Impose.DataModel.Output;
 using Albelli.Impose.Logic.Contract;
 
 namespace Albelli.Impose.Logic
@@ -9,7 +10,6 @@ namespace Albelli.Impose.Logic
         private readonly IOutputFileBuilderFactory _fileBuilderFactory;
         private readonly IImpositionRepository _impositionRepository;
         private readonly ILayoutRepository _layoutRepository;
-        private readonly IPdfGenerator _pdfGenerator;
         private readonly ISourceFilesRepository _sourceFilesRepository;
         private readonly IValidator _validator;
 
@@ -17,18 +17,16 @@ namespace Albelli.Impose.Logic
             IImpositionRepository impositionRepository,
             ISourceFilesRepository sourceFilesRepository,
             IOutputFileBuilderFactory fileBuilderFactory,
-            IPdfGenerator pdfGenerator,
             IValidator validator)
         {
             _layoutRepository = layoutRepository;
             _impositionRepository = impositionRepository;
             _sourceFilesRepository = sourceFilesRepository;
             _fileBuilderFactory = fileBuilderFactory;
-            _pdfGenerator = pdfGenerator;
             _validator = validator;
         }
 
-        public string Impose(BatchMetadata batch)
+        public OutputFile Impose(BatchMetadata batch)
         {
             var layout = _layoutRepository.Get(batch.LayoutKey);
             _validator.ValidateLayout(layout);
@@ -37,9 +35,8 @@ namespace Albelli.Impose.Logic
             var sourceFiles = batch.AlbumIds.Select(albumId => _sourceFilesRepository.Get(albumId)).ToList();
             _validator.ValidateSourceFiles(sourceFiles, layout, imposition);
             var outputFile = outputFileBuilder.Build(sourceFiles);
-            var outputPdfFileName = _pdfGenerator.Generate(outputFile);
 
-            return outputPdfFileName;
+            return outputFile;
         }
     }
 }

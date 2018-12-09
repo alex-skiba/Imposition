@@ -37,5 +37,16 @@ namespace Albelli.Impose.Logic.Tests.DataModel
             actual.Width.ShouldBe(120);
             actual.Height.ShouldBe(40);
         }
+
+        [Test]
+        public void GetCenter_ShouldReturnCorrectPoint()
+        {
+            var baseBox = new Box {Left = 10, Bottom = 20, Width = 100, Height = 120};
+
+            var actual = baseBox.GetCenter();
+
+            actual.X.ShouldBe(60);
+            actual.Y.ShouldBe(80);
+        }
     }
 }
