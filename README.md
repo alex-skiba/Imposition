@@ -1,8 +1,9 @@
 # PL-Imposition
 PoC for new impositioning solution
 
-Currently can read XJF file and generate `Layout` from it. 
+`Layout` defines dimensions of the printed sheet or repeat length.
 
-`Layout` is intendent to be a full description of imposition of one product for a specific press. 
+`Imposition` defines how source pdf pages are placed on the printed sheet.
 
-Now `Layout` contains only sheet size and customization elements.
+Components diagram draft:
+![](https://user-images.githubusercontent.com/16411267/50174282-1e016c00-02fa-11e9-8d66-4a137f1412a4.png)
